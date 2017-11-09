@@ -10,10 +10,20 @@
 html{
     body{
         &.loaded{
-            
+
              @include background-image;
         }
 
+    }
+}
+
+home{
+    #message, #arrows{
+        img{
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
     }
 }
 

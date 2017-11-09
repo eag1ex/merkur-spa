@@ -19,12 +19,14 @@ var pathExists = require('path-exists');
 var concat = require('gulp-concat');
 var config = require('./config');
 var ngAnnotate = require('gulp-ng-annotate');
+var mainBowerFiles = require('gulp-main-bower-files');
 
 var port = process.env.PORT || config.SERVER_PORT;
 
 var APP_PATH = config.APP_PATH;
 var DIST_PATH = config.DIST_PATH;
 
+//https://www.npmjs.com/package/gulp-main-bower-files
 
 /**
  * 
@@ -92,7 +94,9 @@ gulp.task('styles', function () {
     .pipe(csso())
     .pipe(gulp.dest(DIST_PATH + '/styles'))
     .on('finish', function () {
-      browserSync.reload()
+      setTimeout(() => {
+        browserSync.reload()
+      }, 300)
     });
 });
 
@@ -210,10 +214,8 @@ gulp.task('wiredep', ['tsScripts', 'styles', 'move-html-templates'], function ()
 });
 
 
-
 gulp.task('default', ['wiredep', 'watch'], function () {
 
-  var bSync = function () {
     browserSync.init({
       browser: ["chrome"],
       server: {
@@ -225,8 +227,5 @@ gulp.task('default', ['wiredep', 'watch'], function () {
         },
       }
     })
-  }
-  bSync();
-
 
 });

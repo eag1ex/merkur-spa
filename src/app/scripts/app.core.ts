@@ -51,7 +51,7 @@ module app.core {
         state: 'home',
         config: {
           url: '/home',
-          template: '<home></home>',
+          template: '<home class="col-sm-12 col-md-8 col-lg-8"></home>',
           title: 'Home',
           settings: {
             nav: 1
