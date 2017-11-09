@@ -1,0 +1,54 @@
+//@import "compass/css3";
+@import '_mixins';
+@import '_presets';
+@import '_preloader';
+
+//----------------------------
+// @layout.scss
+//----------------------------
+
+html{
+    body{
+        &.loaded{
+            
+             @include background-image;
+        }
+
+    }
+}
+
+
+// STICLY FOOTER  
+.angular-app-include {
+    min-height: 100%;
+    margin-bottom: -110px!important;
+    &:after {
+        content: "";
+        display: block;
+    }
+}
+
+footer {
+    overflow: hidden;
+    img.sponsor-logos{
+        width: 100%;
+        max-width: 698px;
+        height: auto;
+    }
+    background-color: #252525;
+    *{
+        color: #fff;
+    }
+    p {
+        line-height: 15px;
+        font-size: 11px;
+    }
+    height: 110px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    &:after {
+        height: 110px;
+    }
+}

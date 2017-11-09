@@ -1,0 +1,52 @@
+{
+  "name": "merkur-spa",
+  "version": "0.1.0",
+  "description": "Angular MVC",
+  "scripts": {
+    "fix": "npm update& npm i node-sass -g& npm rebuild node-sass",
+    "postinstall": "bower install -g",
+    "start": "gulp"
+  },
+  "author": "Michael",
+  "url": "http://eaglex.net",
+  "license": "CC BY",
+  "engine": {
+    "node": ">=6.9.4",
+    "node-sass": "^3.10.10"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "#"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "typescript": "^2.2.2",
+    "gulp-typescript": "^3.1.6",
+    "csso": "^3.4.0",
+    "del": "^3.0.0",
+    "ejs": "^2.5.6",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-inject": "^4.2.0",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "path-exists": "^3.0.0",
+    "tslint-loader": "^3.5.3",
+    "tslint": "^5.5.0",
+    "wiredep": "^4.0.0"
+  },
+  "dependencies": {
+    "glob": "^7.1.2"
+  }
+}

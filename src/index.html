@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-strict-di>
+
+<head>
+  <base href="/">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" type="image/png" href="#" />
+  <title>Merkur Win</title>
+  <script>
+    var API_MAIN = "<%=API_MAIN%>";
+  </script>
+
+  <!-- inject:css -->
+  <!-- endinject -->
+
+</head>
+
+<body class='preloaderbk' ng-class='{"ng-show ng-animate loaded":angularLoader==1}'>
+
+  <div ng-init="angularLoader=1" ng-include="'dist/js/layout.html'" ng-class='{"ng-show ng-animate loaded":angularLoader==1}'
+    class='angular-app-include mb-1'></div>
+
+  <div id="preloader" class="overlay-loader" ng-if="false" class='fade-out'>
+    <div class="loader-background"></div>
+    <img class="loader-icon spinning-cog " src="./dist/styles/cog09.svg" data-cog="cog09">
+  </div>
+  <div class='clearfix mb-3'></div>
+  <footer class='hideFooter' ng-class='{"ng-show ng-animate":angularLoader==1}'>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 p-2">
+        <div class="w-75 m-auto">
+        <p class="p-2 m-0 text center">© 2017 | MERKUR INTERACTIVE ITALIA S.P.A. con socio unico | Società soggetta ad attività di direzione e coordinamento
+          esercitata dal socio unico Merkur Interactive GmbH P.IVA 02719361202 | GAD 15099</p>
+        <div class="clearfix p-2"><img class="sponsor-logos" src="./dist/styles/images/sponsor.logos.jpg" alt=""></div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- bower:js -->
+  <!-- endbower -->
+
+  <!-- inject:app:js -->
+  <!-- endinject -->
+
+  <!-- inject:appcore:js -->
+  <!-- endinject -->
+
+  <!-- inject:prototype:js -->
+  <!-- endinject -->
+</body>
+
+</html>
