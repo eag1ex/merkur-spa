@@ -43,7 +43,7 @@ $/ gulp
 ***
 
 ###### TODOS ?
-
+Unfortunatly Not optinized (concat) for production, not at this stage. No ins and out, etc..
 
 ***
 
