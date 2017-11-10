@@ -1,0 +1,61 @@
+// mobile
+
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    nav {
+        .logo-wrap {
+            width: 50%!important;
+        }
+    }
+    home {
+        #arrows,
+        #message {
+            img {
+                max-width: 90%;
+            }
+            .w-100 {
+                max-width: 95%!important;
+            }
+        }
+        .message-wrap {
+            display: none;
+        }
+        .isMobile {
+            display: block!important;
+        }
+    }
+    .angular-app-include {
+        margin-bottom: 0!important;
+    }
+    html body.loaded .casino-bk {
+        background-size: 250% auto!important;
+    }
+    footer{
+         height: 250px;
+         &.ft-h{
+             height: 337px!important;
+         }
+         &:after {
+            height: 250px;
+        }
+        .text-wrap{
+            max-width: 65%;
+            p{
+
+            }
+        }
+        .offset-footer{
+            background: #595959;
+                margin-right: -3rem!important;
+            margin-left: -3rem!important;
+        }
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 414px) {
+    html{
+        body home.p-5{
+            padding-top: 0px!important;
+        }
+    }
+}

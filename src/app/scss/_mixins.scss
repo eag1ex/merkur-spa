@@ -21,6 +21,12 @@
     box-shadow: $params;
 }
 
+@mixin radius($params:5px){
+    -webkit-border-radius:$params;
+    -moz-border-radius: $params;
+    border-radius: $params;
+}
+
 @mixin reset-button() {
     border: none!important;
     border-color: transparent!important;
@@ -65,12 +71,13 @@
 }
 
 @mixin background-image{
-     background-size: 100% auto!important;
-     //background-size: contain;
+     background-size: 150% auto!important;
+        
      background: transparent;
      background-repeat: no-repeat!important;
      background-repeat-x: no-repeat;
      background-repeat-y: no-repeat;
+     background-position: top center;
      background-image:url('./images/background.casino.jpg')!important;
 
 }

@@ -1,36 +1,60 @@
 //----------------------------
 // @_presets.scss
 //----------------------------
-
+// color pallete
+$orange:#f0a202;
+$brown: #551213;
+$darkgrey: #252525;
 @font-face {
     font-family: 'ubuntubold';
-    src: url('./fonts/ubuntu-b-webfont.woff2') format('woff2'),
-         url('./fonts/ubuntu-b-webfont.woff') format('woff');
+    src: url('./fonts/ubuntu-b-webfont.woff2') format('woff2'), url('./fonts/ubuntu-b-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'ubuntulight';
-    src: url('./fonts/ubuntu-l-webfont.woff2') format('woff2'),
-         url('./fonts/ubuntu-l-webfont.woff') format('woff');
+    src: url('./fonts/ubuntu-l-webfont.woff2') format('woff2'), url('./fonts/ubuntu-l-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
-.m-auto{
+.m-auto {
     margin: 0 auto;
+}
+
+a,
+.anch,
+span.clicker {
+    text-decoration: underline;
+}
+.blk{
+    display: block;
+}
+.clearfix {
+
+    &:after {
+        display: block;
+        content: "";
+        clear: both;
+        width: 100%;
+    }
+}
+
+.bold {
+    font-family: 'ubuntubold';
+}
+
+.isMobile {
+    display: none;
 }
 
 html,
 body {
     font-family: ubuntulight, Arial, Helvetica, sans-serif;
-    *{
+    * {
         font-family: ubuntulight, Arial, Helvetica, sans-serif;
     }
-
     height: 100%;
 }
 
@@ -39,7 +63,7 @@ button,
     cursor: pointer!important;
 }
 
-.hideFooter{
+.hideFooter {
     opacity: 0;
 }
 
@@ -78,7 +102,6 @@ html .hide-me {
     font-weight: bold;
 }
 
-
 //-------------------- ng-animate
 .animate-enter {
     -webkit-transition: 1s linear all;
@@ -113,6 +136,11 @@ html .hide-me {
 .ng-show {
     transition: 0.1s linear all;
     opacity: 1;
+}
+
+.ng-hide {
+    transition: 0.1s linear all;
+    opacity: 0;
 }
 
 .modal-backdrop.fade {

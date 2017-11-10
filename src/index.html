@@ -27,15 +27,48 @@
     <img class="loader-icon spinning-cog " src="./dist/styles/cog09.svg" data-cog="cog09">
   </div>
   <div class='clearfix mb-3'></div>
-  <footer class='hideFooter' ng-class='{"ng-show ng-animate":angularLoader==1}'>
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-12 p-2">
-        <div class="w-75 m-auto">
-        <p class="p-2 m-0 text center">© 2017 | MERKUR INTERACTIVE ITALIA S.P.A. con socio unico | Società soggetta ad attività di direzione e coordinamento
-          esercitata dal socio unico Merkur Interactive GmbH P.IVA 02719361202 | GAD 15099</p>
-        <div class="clearfix p-2"><img class="sponsor-logos" src="./dist/styles/images/sponsor.logos.jpg" alt=""></div>
-      </div>
-    </div>
+
+
+  <footer class='hideFooter container-fluid' ng-class='{"ng-show ng-animate":angularLoader==1,"ft-h":tcmobile.is==true}'>
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-8 col-lg-8 p-3 pl-5 pr-5">
+        <div class="m-auto">
+         <div class="text-wrap m-auto">
+           <p class="px-2 m-0 text center">© 2017 | MERKUR INTERACTIVE ITALIA S.P.A. con socio unico | Società soggetta ad attività di direzione e coordinamento
+            esercitata dal socio unico Merkur Interactive GmbH P.IVA 02719361202 | GAD 15099</p>
+         </div>
+         
+
+
+          <div class="clearfix px-2 pb-3 d-none d-md-block d-sm-none"><img class="sponsor-logos" src="./dist/styles/images/sponsor.logos.jpg" alt="sponsor logos"></div>
+
+          <div class="clearfix d-none d-md-block d-sm-none">
+            <p class="tc pl-4 pr-4" ng-init="tc.is=false" ng-show="tc.is==true">
+              Il gioco è vietato ai minori e può causare dipendenza patologica. Consulta le probabilità di vincita
+            </p>
+          </div>
+
+          <span ng-click="(tc.is==false)? tc.is=true:tc.is=false;" class='clicker clearfix d-none d-md-block d-sm-none'>Si applicano Termini e condizioni</span>
+
+          <!-- mobile -->
+          <div class="d-md-none d-ld-none d-sm-block my-3">
+
+            <span ng-click="(tcmobile.is==false)? tcmobile.is=true:tcmobile.is=false;" class='blk mt-2 mb-4 clicker clearfix '>Si applicano Termini e condizioni</span>
+
+            <img class="sponsor-logos w-50" src="./dist/styles/images/sponsor.logos.mobile.jpg" alt="sponsor logos">
+          </div>
+
+          <!-- mobile -->
+          <div class="d-md-none d-ld-none d-sm-block offset-footer p-3 mt-1">
+            <div class="pl-4 pr-4 w-60 m-auto" ng-init="tcmobile.is=false" ng-show="tcmobile.is==true">
+              <p class="tc mb-1">
+                Il gioco è vietato ai minori e può causare dipendenza patologica. Consulta le probabilità di vincita
+              </p>
+              <img class="sponsor-logos w-25 center" src="./dist/styles/images/labels.png" alt="labels">
+            </div>
+          </div>
+
+        </div>
 
   </footer>
 
@@ -50,6 +83,8 @@
 
   <!-- inject:prototype:js -->
   <!-- endinject -->
+
+  <div class="casino-bk"></div>
 </body>
 
 </html>
