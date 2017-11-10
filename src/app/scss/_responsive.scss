@@ -1,7 +1,25 @@
 // mobile
 
+@media only screen and (min-width: 768px) and (max-width: 768px) {
+    html [uib-modal-window].modal .modal-dialog {
+        margin-top: 50%;
+        max-width: 700px!important;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1024px) {
+    html [uib-modal-window].modal .modal-dialog {
+        margin-top: 30%;
+        max-width: 800px!important;
+    }
+}
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+
+    html [uib-modal-window].modal .modal-dialog{
+        margin-top: 50%!important;
+    }
+
     nav {
         .logo-wrap {
             width: 50%!important;
@@ -27,19 +45,24 @@
     .angular-app-include {
         margin-bottom: 0!important;
     }
-    html body.loaded .casino-bk {
+    html body .casino-bk {
         background-size: 250% auto!important;
     }
+
+
     footer{
-         height: 250px;
+        img.sponsor-logos{
+            max-width: 104px!important;
+        }
+         height: 222px;
          &.ft-h{
-             height: 337px!important;
+             height: 290px!important;
          }
          &:after {
             height: 250px;
         }
         .text-wrap{
-            max-width: 65%;
+            max-width: 90%;
             p{
 
             }
@@ -48,14 +71,20 @@
             background: #595959;
                 margin-right: -3rem!important;
             margin-left: -3rem!important;
+            margin-bottom: -17px;
         }
     }
+
+    
 }
 
-@media only screen and (min-width: 0px) and (max-width: 414px) {
+@media only screen and (min-width: 0px) and (max-width: 667px) {
     html{
-        body home.p-5{
-            padding-top: 0px!important;
+        body {
+            height: auto!important;
+            home.p-5{
+                padding-top: 0px!important;
+            }
         }
     }
 }

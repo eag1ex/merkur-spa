@@ -15,6 +15,8 @@ module app {
     // dependant
     'ui.router',
     'ngAnimate',
+    'app.validateNumber',
+    'ui.bootstrap',
     'app.core.stateChecking',
 
     //structure

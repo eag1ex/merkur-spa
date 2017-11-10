@@ -1,0 +1,47 @@
+<div class="form-wrap p-3">
+
+    <form ng-init='formValid=0;' name="form" class="form p-3" novalidate ng-submit="(form.$valid==true)? formValid=1:formValid=0;"
+        ng-hide='formValid==1'>
+
+        <div class="input-group input-group-select p-2">
+            <select required ng-model="userTitle" name="userTitle" class="custom-select " id="inlineFormCustomSelect">
+                                <option value='' selected>Title</option>
+                                <option value="MR">MR.</option>
+                                <option value="MS">MS.</option>
+                                <option value="MRS">MRS.</option>
+                                <option value="DR">DR.</option>
+                            </select>
+            <span class=required>*</span>
+            <input ng-pattern="/^[a-zA-Z\ ]*$/" ng-model="userName" ng-minlength="5" ng-maxlength="55" required name="userName" type="text"
+                class="form-control pl-2" id="userName" placeholder="Your name">
+            <span class=required>*</span>
+        </div>
+
+        <div class="input-group  p-2">
+            <input ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" ng-model="userEmail" ng-minlength="5" ng-maxlength="55" required name="userEmail"
+                type="email" class="form-control" id="userEmail" placeholder="Your email">
+            <span class=required>*</span>
+        </div>
+
+        <div class="input-group p-2">
+            <input ng-model="userPhone" name="userPhone" type="text" validnumber class="form-control" id="userPhone" required ng-minlength="5"
+                ng-maxlength="12" placeholder="Phone number">
+            <span class=required>*</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary my-2 mx-2">Submit</button>
+
+
+    </form>
+
+    <pre ng-show="formValid==1" class='mt-5 p-2'>
+                    <code>
+                        Output:
+                        {{form.userTitle.$viewValue}}
+                        {{form.userName.$viewValue}}
+                        {{form.userEmail.$viewValue}}
+                        {{form.userPhone.$viewValue}}
+                    </code></pre>
+
+    <div class="p-3 mb-2 bg-success text-white p-4 center" ng-show="formValid==1">Su registro ha sido efectuado</div>
+</div>

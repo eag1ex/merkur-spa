@@ -18,7 +18,7 @@ $/ npm install
 ```
 #!python
 
-$/ npm start
+$/ gulp
 ```
 
 ##### Optional

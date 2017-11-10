@@ -181,7 +181,7 @@ gulp.task('wiredep', ['tsScripts', 'styles', 'move-html-templates'], function ()
   var wireupConf = {
     'ignorePath': '../public/',
     //include:['rxjs/dist/rx.all.min.js'],
-    exclude: ['sass-bem', 'bootstrap-sass', 'angular-bootstrap'], // ignore
+    exclude: ['sass-bem','bootstrap.js', 'bootstrap-sass'], // ignore
     directory: './public/bower_components'
   }
 

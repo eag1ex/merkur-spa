@@ -2,67 +2,94 @@
 @import '_mixins';
 @import '_presets';
 @import '_preloader';
-
 //----------------------------
 // @layout.scss
 //----------------------------
-
-html{
-    body{
-        &.loaded{
-
-        }
-
+html {
+    body {
+        &.loaded {}
     }
 }
 
-home{
+html [uib-modal-window].modal {
+    &.fade {
+        -webkit-transition: 0.1s linear all;
+        transition: 0.1s linear all;
+        opacity: 1!important;
+    }
+    .modal-dialog {
+        margin-top: 10%;
+        max-width: 800px!important;
+    }
+}
 
-    #message, #arrows{
-        img{
+.form {
+    input[required].ng-empty,
+    select[required].ng-empty {
+        border-color: $orange;
+    }
+    .ng-valid-required,
+    .ng-valid.ng-prestine {
+        border-color: $orange;
+    }
+    .ng-valid.ng-touched {
+        border-color: #3bb941;
+    }
+    .ng-invalid-pattern.ng-dirty,
+    .ng-invalid.ng-dirty {
+        border-color: $brown;
+    }
+}
+
+home {
+    min-height: 470px!important;
+    #message,
+    #arrows {
+        img {
             width: 100%;
             height: auto;
             text-align: center;
         }
     }
-
-    .register{
+    button.register {
+        &:hover {
+            background: $brown;
+        }
         text-align: center;
         font-family: 'ubuntubold';
         background: $orange;
         color:#fff;
         font-size: 1.5rem;
         border: 1px solid #fff;
-         @include box-shadow(2px 2px 2px 1px rgba(0, 0, 0, 0.2));
+        @include box-shadow(2px 2px 2px 1px rgba(0, 0, 0, 0.2));
     }
 }
 
-nav{
-   // background: #fff;
-    .logo-wrap{
+nav {
+    // background: #fff;
+    .logo-wrap {
         max-height: 55px;
         height: 100%;
         display: inline-block;
         background: $brown;
-            @include radius(0px 5px 5px 0px);
-            @include box-shadow(2px 2px 2px 1px rgba(0, 0, 0, 0.2));
-
-        .logo{
+        @include radius(0px 5px 5px 0px);
+        @include box-shadow(2px 2px 2px 1px rgba(0, 0, 0, 0.2));
+        .logo {
             float: right;
-          max-width: 187px;
-          height: 100%;
+            max-width: 187px;
+            height: 100%;
         }
     }
-
-    .labels{
-         max-width: 104px;
-          height: auto;
+    .labels {
+        max-width: 104px;
+        height: auto;
     }
 }
 
 // STICLY FOOTER  
 .angular-app-include {
-    min-height: 100%;
+    min-height: 600px;
+    height: 100%;
     margin-bottom: -155px!important;
     &:after {
         content: "";
@@ -71,40 +98,42 @@ nav{
 }
 
 // background imagfe
-.casino-bk{
+.casino-bk {
     position: fixed;
     width: 100%;
     max-width: 1920px;
     height: 100%;
     display: inline-block;
-    z-index: -1;
-    top: 0;bottom: 0; left: 0;  right: 0;
+    z-index: -2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-html{
-    body{
-        &.loaded{
-            .casino-bk{
-                 @include background-image;
-            }           
+// load background
+html {
+    body {
+        .casino-bk {
+            @include background-image;
         }
     }
 }
 
-
 footer {
-    a.anch, span.clicker{
+    a.anch,
+    span.clicker {
         cursor: pointer;
         font-size: 0.7rem;
     }
-    overflow: hidden;
-    img.sponsor-logos{
+   // overflow: hidden;
+    img.sponsor-logos {
         width: 100%;
         max-width: 698px;
         height: auto;
     }
     background-color: #252525;
-    *{
+    * {
         color: #fff;
     }
     p {
@@ -120,8 +149,6 @@ footer {
         height: 150px;
     }
 }
-
-
 
 //////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app" ng-strict-di>
+<html lang="en" ng-app="app">
 
 <head>
   <base href="/">
@@ -29,11 +29,11 @@
   <div class='clearfix mb-3'></div>
 
 
-  <footer class='hideFooter container-fluid' ng-class='{"ng-show ng-animate":angularLoader==1,"ft-h":tcmobile.is==true}'>
-    <div class="row justify-content-center">
+  <footer class='hideFooter container-fluid' ng-class='{"ng-show ng-animate":$root.footerShow==1,"ft-h":tcmobile.is==true}'>
+    <div class="row justify-content-center bg-darkgrey">
       <div class="col-sm-12 col-md-8 col-lg-8 p-3 pl-5 pr-5">
         <div class="m-auto">
-         <div class="text-wrap m-auto">
+         <div class="text-wrap m-auto pt-2">
            <p class="px-2 m-0 text center">© 2017 | MERKUR INTERACTIVE ITALIA S.P.A. con socio unico | Società soggetta ad attività di direzione e coordinamento
             esercitata dal socio unico Merkur Interactive GmbH P.IVA 02719361202 | GAD 15099</p>
          </div>
@@ -59,8 +59,8 @@
           </div>
 
           <!-- mobile -->
-          <div class="d-md-none d-ld-none d-sm-block offset-footer p-3 mt-1">
-            <div class="pl-4 pr-4 w-60 m-auto" ng-init="tcmobile.is=false" ng-show="tcmobile.is==true">
+          <div class="d-md-none d-ld-none d-sm-block offset-footer p-3 mt-1" ng-init="tcmobile.is=false" ng-show="tcmobile.is==true">
+            <div class="pl-4 pr-4 w-60 m-auto" > 
               <p class="tc mb-1">
                 Il gioco è vietato ai minori e può causare dipendenza patologica. Consulta le probabilità di vincita
               </p>

@@ -10,9 +10,37 @@ namespace app.home {
       public $element: any,
       public $document: any,
       public $timeout: any,
-      public $q: any
-    ) { };
+      public $q: any,
+      public $uibModal: any
+    ) {
 
+
+    };
+
+    openFrom() {
+      this.openModal()
+    }
+
+    openModal() {
+
+      this.$uibModal.open({
+        animation: true,
+        templateUrl: 'dist/js/modal.form.html',
+
+        controller: function () {
+
+          console.log('modal controller');
+
+        },
+        controllerAs: 'vm',
+
+      }).result.then((result) => {
+
+      }, function (reason) {
+        console.log('modal failed!', reason)
+      });
+
+    }
 
   }
 

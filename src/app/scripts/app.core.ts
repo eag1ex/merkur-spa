@@ -24,7 +24,11 @@ module app.core {
     $rootScope._ = window._;
     $rootScope.angularLoader = 0;
     $rootScope.$on("$stateChangeSuccess", () => {
-      console.info('Angular Loaded');
+
+      $timeout(()=>{
+        $rootScope.footerShow = 1;
+      },500)
+
     });
   }
 
